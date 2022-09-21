@@ -172,7 +172,9 @@ ThisBuild / coreDependencies := (providedSparkDependencies.value ++ testCoreDepe
   "io.netty" % "netty-handler" % "4.1.68.Final",
   "io.netty" % "netty-transport-native-epoll" % "4.1.68.Final",
   "com.github.samtools" % "htsjdk" % "2.21.2",
-  "org.yaml" % "snakeyaml" % "1.16"
+  "org.yaml" % "snakeyaml" % "1.16",
+  "com.fasterxml.jackson.core" % "jackson-core" % "2.13.1",
+  "com.fasterxml.jackson.core" % "jackson-databind" % "2.13.1"
 )).map(_.exclude("com.google.code.findbugs", "jsr305"))
 
 lazy val root = (project in file(".")).aggregate(core, python, hail, docs)
